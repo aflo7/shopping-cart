@@ -42,10 +42,14 @@
     font-weight: bold;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 900px) {
     .store-top {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+    }
+
+    .store-header {
+        max-width: 600px;
     }
 }
