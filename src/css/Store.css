@@ -1,0 +1,51 @@
+.store {
+    background-color: rgb(245, 245, 247);
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.help-wrapper > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.products {
+    display: flex;
+}
+
+.products p {
+    text-align: center;
+    font-weight: bold;
+}
+
+.products img {
+    height: 80px;
+}
+.products > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.store-top {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.store-header {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 750px) {
+    .store-top {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

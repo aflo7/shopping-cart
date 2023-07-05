@@ -1,0 +1,23 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px 20px;
+}
+
+.nav-right,
+.nav-left {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.credit-text {
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.nav-wrapper {
+    background-color: rgb(245,245,247);
+}
