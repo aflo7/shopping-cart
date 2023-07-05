@@ -1,3 +1,5 @@
+import '../css/cart.css'
+
 function Cart({ cartItems, total }) {
     if (total > 0) {
         return (
@@ -15,8 +17,11 @@ function Cart({ cartItems, total }) {
                         if (item.qty > 0) {
                             return (
                                 <div key={i}>
-                                    {item.name} {item.qty} $
-                                    {item.qty * item.price}
+                                  <p>{item.name}</p>
+                                  <p>{item.qty}</p>
+                                  <p>${item.qty * item.price}</p>
+
+                                      
                                 </div>
                             )
                         } else return null

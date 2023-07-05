@@ -1,5 +1,4 @@
 .store {
-    background-color: rgb(245, 245, 247);
     padding: 10px 20px;
     display: flex;
     flex-direction: column;
@@ -42,6 +41,17 @@
     font-weight: bold;
 }
 
+.credit-text {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: white;
+}
+
+.store-wrapper {
+    background-color: rgb(245, 245, 247);
+
+}
+
 @media screen and (min-width: 900px) {
     .store-top {
         flex-direction: row;
@@ -51,5 +61,16 @@
 
     .store-header {
         max-width: 600px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .store-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .store {
+        width: 1200px;
     }
 }

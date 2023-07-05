@@ -5,7 +5,8 @@
     gap: 60px;
     width: fit-content;
     margin-bottom: 60px;
-
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .phone-info {
@@ -22,12 +23,42 @@
     gap: 60px;
 }
 
-.product-iphone-wrapper {
+.product-iphone-content {
     display: flex;
     flex-direction: column;
     gap: 80px;
 }
 
-.product-iphone-wrapper > div {
-    /* border: 5px solid blue; */
+.grey-bg {
+    background-color: rgb(245, 245, 247);
+}
+.top-nav-phones {
+    display: flex;
+    gap: 30px;
+    padding: 10px 20px;
+    overflow: auto;
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+
+.top-nav-phones p {
+    text-align: center;
+}
+.top-nav-phones > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+@media screen and (min-width: 1200px) {
+    .product-iphone-wrapper,
+    .top-nav-phones-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .product-iphone-content,
+    .top-nav-phones {
+        width: 1200px;
+    }
 }
