@@ -31,7 +31,7 @@ const phoneInfo = [
     }
 ]
 
-function Product_iPhone() {
+function Product_iPhone({ handleAddCartItem }) {
     return (
         <div className="product-iphone-wrapper">
             <div
@@ -102,7 +102,13 @@ function Product_iPhone() {
                                     <p>{item.desc}</p>
                                     <p>${item.price}</p>
 
-                                    <button>Add to cart</button>
+                                    <button
+                                        onClick={() =>
+                                            handleAddCartItem(item.name)
+                                        }
+                                    >
+                                        Add to cart
+                                    </button>
                                     <p className="blue-text">
                                         Learn more &#62;
                                     </p>

@@ -53,7 +53,7 @@ function Store() {
             </div>
 
             <div>
-                <p style={{ fontSize: "25px", fontWeight: "bold" }}>
+                <p style={{ fontSize: "1.6rem", fontWeight: "bold" }}>
                     The latest.{" "}
                     <span style={{ color: "rgb(110,110,115)" }}>
                         Take a look at what’s new, right now.

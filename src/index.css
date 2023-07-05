@@ -95,6 +95,10 @@ a {
     color: black;
 }
 
+main {
+    padding-top: 40px;
+}
+
 @media screen and (min-width: 1200px) {
     main {
         display: flex;

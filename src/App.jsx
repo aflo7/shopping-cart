@@ -8,8 +8,69 @@ import {
 } from "react-icons/ai"
 import "./css/App.css"
 import Cart from "./components/Cart"
+import { useEffect, useState } from "react"
+
+const initialCart = [
+    {
+        name: "iPhone 14 Pro",
+        desc: "The ultimate iPhone.",
+        price: 999,
+        size: '6.7" or 6.1"',
+        img: "https://www.apple.com/v/iphone/home/bo/images/overview/compare/compare_iphone_14_pro__cjmfbiggqhpy_large.jpg",
+        qty: 0
+    },
+    {
+        name: "iPhone 14",
+        desc: "A total powerhouse.",
+        price: 799,
+        size: '6.7" or 6.1"',
+        img: "https://www.apple.com/v/iphone/home/bo/images/overview/compare/compare_iphone_14__ct4sjk962pea_large.jpg",
+        qty: 0
+    },
+    {
+        name: "iPhone 13",
+        desc: "As amazing as ever.",
+        price: 599,
+        size: '6.1" or 5.4"',
+        img: "https://www.apple.com/v/iphone/home/bo/images/overview/compare/compare_iphone_13__fqzwhmfmroey_large.jpg",
+        qty: 0
+    },
+    {
+        name: "iPhone SE",
+        desc: "Serious power. Serious value.",
+        price: 429,
+        size: '4.7"',
+        img: "https://www.apple.com/v/iphone/home/bo/images/overview/compare/compare_iphone_se__d5blqx1pgymq_large.jpg",
+        qty: 0
+    }
+]
 
 function App() {
+    const [cartItems, setCartItems] = useState(initialCart)
+    const [total, setTotal] = useState(0)
+
+    function handleAddCartItem(itemName) {
+        const currentCartItems = [...cartItems]
+        setCartItems(
+            currentCartItems.map((cartItem) => {
+                if (cartItem.name === itemName) {
+                    cartItem.qty++
+                    return cartItem
+                } else {
+                    return cartItem
+                }
+            })
+        )
+    }
+
+    useEffect(() => {
+        let calculatedTotal = 0
+        cartItems.forEach(item => {
+            calculatedTotal += item.price * item.qty
+        })
+        setTotal(calculatedTotal)
+    }, [cartItems])
+
     return (
         <>
             <BrowserRouter>
@@ -28,7 +89,10 @@ function App() {
 
                         <div className="nav-right">
                             <AiOutlineSearch />
-                            <AiOutlineShoppingCart />
+
+                            <Link to="/cart" element={<Cart />}>
+                                <AiOutlineShoppingCart />
+                            </Link>
                         </div>
                     </nav>
                 </div>
@@ -44,9 +108,18 @@ function App() {
                             <Route path="/" element={<Store />} />
                             <Route
                                 path="/iphone"
-                                element={<Product_iPhone />}
+                                element={
+                                    <Product_iPhone
+                                    handleAddCartItem={
+                                        handleAddCartItem
+                                        }
+                                    />
+                                }
                             />
-                            <Route path="/cart" element={<Cart />} />
+                            <Route
+                                path="/cart"
+                                element={<Cart cartItems={cartItems} total={total} />}
+                            />
                         </Routes>
                     </div>
                 </main>
