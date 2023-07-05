@@ -4,6 +4,7 @@ import "../css/Store.css"
 import storeMac from "../images/storemac.png"
 import storeIphone from "../images/storeiphone.png"
 import storeIpad from "../images/storeipad.png"
+import { Link } from "react-router-dom"
 function Store() {
     return (
         <div className="store">
@@ -37,15 +38,15 @@ function Store() {
             </div>
 
             <div className="products">
-                <div>
+                <div className="product">
                     <img src={storeMac} />
                     <p>Mac</p>
                 </div>
-                <div>
-                    <img src={storeIphone} />
-                    <p>iPhone</p>
-                </div>
-                <div>
+                    <Link to="/iphone" className="product">
+                        <img src={storeIphone} />
+                        <p>iPhone</p>
+                    </Link>
+                <div className="product">
                     <img src={storeIpad} />
                     <p>iPad</p>
                 </div>

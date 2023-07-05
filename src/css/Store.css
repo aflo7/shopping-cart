@@ -24,7 +24,7 @@
 .products img {
     height: 80px;
 }
-.products > div {
+.products .product {
     display: flex;
     flex-direction: column;
     gap: 10px;
