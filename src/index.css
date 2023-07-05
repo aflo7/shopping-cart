@@ -74,6 +74,10 @@ h6 {
     cursor: pointer;
 }
 
+button {
+    cursor: pointer;
+}
+
 a:link {
     text-decoration: none;
 }
