@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
 import Store from "./components/Store"
-import Product_iPhone from "./components/Product_iPhone"
+import ProductPagePhone from "./components/ProductPagePhone"
 import {
     AiOutlineShoppingCart,
     AiOutlineSearch,
@@ -9,38 +9,48 @@ import {
 import "./css/App.css"
 import Cart from "./components/Cart"
 import { useEffect, useState } from "react"
+import ProductPageMac from "./components/ProductPageMac"
 
 const initialCart = [
     {
         name: "iPhone 14 Pro",
-        desc: "The ultimate iPhone.",
         price: 999,
-        size: '6.7" or 6.1"',
-        img: "https://www.apple.com/v/iphone/home/bo/images/overview/compare/compare_iphone_14_pro__cjmfbiggqhpy_large.jpg",
         qty: 0
     },
     {
         name: "iPhone 14",
-        desc: "A total powerhouse.",
         price: 799,
-        size: '6.7" or 6.1"',
-        img: "https://www.apple.com/v/iphone/home/bo/images/overview/compare/compare_iphone_14__ct4sjk962pea_large.jpg",
         qty: 0
     },
     {
         name: "iPhone 13",
-        desc: "As amazing as ever.",
         price: 599,
-        size: '6.1" or 5.4"',
-        img: "https://www.apple.com/v/iphone/home/bo/images/overview/compare/compare_iphone_13__fqzwhmfmroey_large.jpg",
         qty: 0
     },
     {
         name: "iPhone SE",
-        desc: "Serious power. Serious value.",
         price: 429,
-        size: '4.7"',
-        img: "https://www.apple.com/v/iphone/home/bo/images/overview/compare/compare_iphone_se__d5blqx1pgymq_large.jpg",
+        qty: 0
+    },
+
+    {
+        name: "MacBook Air 13”",
+        price: 999,
+        qty: 0
+    },
+    {
+        name: "MacBook Air 13” and 15”",
+        price: 1099,
+        qty: 0
+    },
+    {
+        name: "MacBook Pro 13”",
+        price: 1299,
+        qty: 0
+    },
+    {
+        name: "MacBook Pro 14” and 16”",
+        price: 1999,
         qty: 0
     }
 ]
@@ -81,6 +91,14 @@ function App() {
                             <p>Store</p>
                         </Link>
 
+                        <Link to="/mac">
+                            <p>Mac</p>
+                        </Link>
+
+                        <Link to="/ipad">
+                            <p>iPad</p>
+                        </Link>
+
                         <Link to="/iphone">
                             <p>iPhone</p>
                         </Link>
@@ -99,9 +117,17 @@ function App() {
             <Routes>
                 <Route path="/" element={<Store />} />
                 <Route
+                    path="/mac"
+                    element={
+                        <ProductPageMac handleAddCartItem={handleAddCartItem} />
+                    }
+                />
+                <Route
                     path="/iphone"
                     element={
-                        <Product_iPhone handleAddCartItem={handleAddCartItem} />
+                        <ProductPagePhone
+                            handleAddCartItem={handleAddCartItem}
+                        />
                     }
                 />
                 <Route

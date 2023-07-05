@@ -5,6 +5,11 @@
     gap: 30px;
 }
 
+.help-wrapper {
+    display: grid;
+    gap: 20px;
+}
+
 .help-wrapper > div {
     display: flex;
     align-items: center;
@@ -49,7 +54,27 @@
 
 .store-wrapper {
     background-color: rgb(245, 245, 247);
+}
 
+.quick-links-header {
+    font-size: 1.6rem; 
+    font-weight: bold;
+}
+.quick-link-wrapper {
+    display: grid;
+    gap: 20px;
+}
+.quick-link-btn-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.quick-link-btn-wrapper > button {
+    border-radius: 1000px;
+    background-color: rgb(224, 224, 227);
+    border: none;
+    padding: 10px 20px;
 }
 
 @media screen and (min-width: 900px) {

@@ -1,0 +1,28 @@
+.top-nav-products {
+    display: flex;
+    gap: 30px;
+    padding: 10px 20px;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.top-nav-products p {
+    text-align: center;
+}
+.top-nav-products > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+@media screen and (min-width: 1200px) {
+    .top-nav-product-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .top-nav-products {
+        width: 1200px;
+    }
+}

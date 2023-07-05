@@ -1,10 +1,10 @@
-// import React from 'react'
 import { BiSupport } from "react-icons/bi"
-import "../css/Store.css"
+import "../css/store.css"
 import storeMac from "../images/storemac.png"
 import storeIphone from "../images/storeiphone.png"
 import storeIpad from "../images/storeipad.png"
 import { Link } from "react-router-dom"
+
 function Store() {
     return (
         <>
@@ -71,6 +71,16 @@ function Store() {
                                 Take a look at what’s new, right now.
                             </span>
                         </p>
+                    </div>
+
+                    <div className="quick-link-wrapper">
+                        <p className="quick-links-header">Quick Links</p>
+                        <div className="quick-link-btn-wrapper">
+                            <button>Order Status</button>
+                            <button>Shopping Help</button>
+                            <button>Returns</button>
+                            <button>Your Saves</button>
+                        </div>
                     </div>
                 </div>
             </div>

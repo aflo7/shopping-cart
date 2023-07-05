@@ -10,9 +10,15 @@ nav {
 .nav-left {
     display: flex;
     gap: 20px;
-    align-items: center;
 }
 
 .nav-wrapper {
-    background-color: rgb(245,245,247);
+    background-color: rgb(245, 245, 247);
+}
+
+.credit-text-grey-bg {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: white;
+    background-color: rgb(245, 245, 247);
 }

@@ -1,5 +1,6 @@
 import "../css/product-iphone.css"
-
+import Products from "./Products"
+import NavProducts from "./NavProducts"
 const phoneInfo = [
     {
         name: "iPhone 14 Pro",
@@ -54,25 +55,12 @@ const navPhoneInfo = [
     }
 ]
 
-function Product_iPhone({ handleAddCartItem }) {
+function ProductPagePhone({ handleAddCartItem }) {
     return (
         <>
+            <NavProducts navProductInfo={navPhoneInfo}/>
 
-        <div className="top-nav-phones-wrapper">
-
-        
-            <div className="top-nav-phones">
-                {navPhoneInfo.map((item, i) => {
-                    return (
-                        <div key={i}>
-                            <img src={item.img} alt={item.name} height="50px"/>
-                            <p style={{fontSize: '0.8rem'}}>{item.name}</p>
-                        </div>
-                    )
-                })}
-            </div>
-            </div>
-            <p className="credit-text grey-bg">
+            <p className="credit-text-grey-bg">
                 Get $200-$640 in credit toward iPhone 14 or iPhone 14 Pro when
                 you trade in iPhone 11 or higher.{" "}
                 <span className="blue-text">Shop iPhone &#62;</span>
@@ -119,56 +107,13 @@ function Product_iPhone({ handleAddCartItem }) {
                             width={"100%"}
                         ></img>
                     </div>
-                    <div style={{ display: "flex", justifyContent: "center" }}>
-                        <div className="phone-content">
-                            <p
-                                style={{
-                                    textAlign: "center",
-                                    fontSize: "2rem",
-                                    fontWeight: "bold"
-                                }}
-                            >
-                                Which iPhone is right for you?
-                            </p>
-                            <div className="phone-info-wrapper">
-                                {phoneInfo.map((item, i) => {
-                                    return (
-                                        <div className="phone-info" key={i}>
-                                            <img
-                                                src={item.img}
-                                                alt={item.name}
-                                                height={"250px"}
-                                            />
-                                            <p
-                                                style={{
-                                                    fontWeight: "bold",
-                                                    fontSize: "1.2rem"
-                                                }}
-                                            >
-                                                {item.name}
-                                            </p>
-                                            <p>{item.desc}</p>
-                                            <p>${item.price}</p>
 
-                                            <button
-                                                onClick={() =>
-                                                    handleAddCartItem(item.name)
-                                                }
-                                            >
-                                                Add to cart
-                                            </button>
-                                            <p className="blue-text">
-                                                Learn more &#62;
-                                            </p>
-                                        </div>
-                                    )
-                                })}
-                            </div>
-                        </div>
-                    </div>
+
+                    <Products handleAddCartItem={handleAddCartItem} productArr={phoneInfo} productImgHeight="250px"/>
+
                 </div>
             </div>
         </>
     )
 }
-export default Product_iPhone
+export default ProductPagePhone
