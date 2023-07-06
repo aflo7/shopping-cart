@@ -1,6 +1,4 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
-import Store from "./components/Store"
-import ProductPagePhone from "./components/ProductPagePhone"
+import { BrowserRouter, Link } from "react-router-dom"
 import {
     AiOutlineShoppingCart,
     AiOutlineSearch,
@@ -9,7 +7,7 @@ import {
 import "./css/App.css"
 import Cart from "./components/Cart"
 import { useEffect, useState } from "react"
-import ProductPageMac from "./components/ProductPageMac"
+import AnimatedRoutes from "./AnimatedRoutes"
 
 const initialCart = [
     {
@@ -114,27 +112,11 @@ function App() {
                 </nav>
             </div>
 
-            <Routes>
-                <Route path="/" element={<Store />} />
-                <Route
-                    path="/mac"
-                    element={
-                        <ProductPageMac handleAddCartItem={handleAddCartItem} />
-                    }
-                />
-                <Route
-                    path="/iphone"
-                    element={
-                        <ProductPagePhone
-                            handleAddCartItem={handleAddCartItem}
-                        />
-                    }
-                />
-                <Route
-                    path="/cart"
-                    element={<Cart cartItems={cartItems} total={total} />}
-                />
-            </Routes>
+            <AnimatedRoutes
+                handleAddCartItem={handleAddCartItem}
+                cartItems={cartItems}
+                total={total}
+            />
         </BrowserRouter>
     )
 }

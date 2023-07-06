@@ -1,6 +1,6 @@
 import Product from "./Product"
 import "../css/products.css"
-function Products({ handleAddCartItem, productArr, productImgHeight }) {
+function Products({ handleAddCartItem, productArr, productImgHeight, productName }) {
     return (
         <div className="products-wrapper">
             <div className="product-content">
@@ -11,7 +11,7 @@ function Products({ handleAddCartItem, productArr, productImgHeight }) {
                         fontWeight: "bold"
                     }}
                 >
-                    Which iPhone is right for you?
+                    Which {productName} is right for you?
                 </p>
                 <div className="product-info-wrapper">
                     {productArr.map((item, i) => {

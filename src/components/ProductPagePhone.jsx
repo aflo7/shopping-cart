@@ -1,6 +1,7 @@
 import "../css/product-iphone.css"
 import Products from "./Products"
 import NavProducts from "./NavProducts"
+import { motion } from "framer-motion"
 const phoneInfo = [
     {
         name: "iPhone 14 Pro",
@@ -57,8 +58,12 @@ const navPhoneInfo = [
 
 function ProductPagePhone({ handleAddCartItem }) {
     return (
-        <>
-            <NavProducts navProductInfo={navPhoneInfo}/>
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+        >
+            <NavProducts navProductInfo={navPhoneInfo} />
 
             <p className="credit-text-grey-bg">
                 Get $200-$640 in credit toward iPhone 14 or iPhone 14 Pro when
@@ -108,12 +113,16 @@ function ProductPagePhone({ handleAddCartItem }) {
                         ></img>
                     </div>
 
+                    <Products
+                        handleAddCartItem={handleAddCartItem}
+                        productArr={phoneInfo}
+                        productImgHeight="250px"
+                        productName="iPhone"
 
-                    <Products handleAddCartItem={handleAddCartItem} productArr={phoneInfo} productImgHeight="250px"/>
-
+                    />
                 </div>
             </div>
-        </>
+        </motion.div>
     )
 }
 export default ProductPagePhone

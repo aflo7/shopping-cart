@@ -1,6 +1,7 @@
 import "../css/product-page-mac.css"
 import NavProducts from "./NavProducts"
 import Products from "./Products"
+import { motion } from "framer-motion"
 const macInfo = [
     {
         name: "MacBook Air 13”",
@@ -65,7 +66,11 @@ const navMacInfo = [
 
 function ProductPageMac({ handleAddCartItem }) {
     return (
-        <div>
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+        >
             <NavProducts navProductInfo={navMacInfo} />
             <p className="credit-text-grey-bg">
                 Save on Mac or iPad with education pricing. Plus get a gift card
@@ -79,10 +84,11 @@ function ProductPageMac({ handleAddCartItem }) {
                         handleAddCartItem={handleAddCartItem}
                         productArr={macInfo}
                         productImgHeight="100px"
+                        productName="Mac"
                     />
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

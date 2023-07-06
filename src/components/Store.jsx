@@ -4,10 +4,15 @@ import storeMac from "../images/storemac.png"
 import storeIphone from "../images/storeiphone.png"
 import storeIpad from "../images/storeipad.png"
 import { Link } from "react-router-dom"
+import { motion } from "framer-motion"
 
 function Store() {
     return (
-        <>
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+        >
             <p className="credit-text">
                 Get $200-$640 in credit toward iPhone 14 or iPhone 14 Pro when
                 you trade in iPhone 11 or higher.{" "}
@@ -84,7 +89,7 @@ function Store() {
                     </div>
                 </div>
             </div>
-        </>
+        </motion.div>
     )
 }
 
