@@ -1,19 +1,20 @@
-
-
-
 .product-mac-content {
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
 }
 
 @media screen and (min-width: 1000px) {
-  .product-mac-wrapper {
-      display: flex;
-      justify-content: center;
-  }
+    .product-mac-wrapper {
+        display: flex;
+        justify-content: center;
+    }
 
-  .product-mac-content {
-      width: 1000px;
-  }
+    .product-mac-content {
+        width: 1000px;
+    }
+}
+
+.mac-img {
+    padding: 160px 20px;
 }

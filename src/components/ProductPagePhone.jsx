@@ -105,20 +105,16 @@ function ProductPagePhone({ handleAddCartItem }) {
                         </p>
                         <p className="blue-text">Learn more &#62;</p>
                     </div>
-
-                    <div style={{ paddingLeft: "20px", paddingRight: "20px" }}>
-                        <img
-                            src="https://www.apple.com/v/iphone/home/bo/images/overview/hero/hero_iphone_14__de41900yuggi_large.jpg"
-                            width={"100%"}
-                        ></img>
-                    </div>
+                    <img
+                        style={{ padding: "40px 20px" }}
+                        src="https://www.apple.com/v/iphone/home/bo/images/overview/hero/hero_iphone_14__de41900yuggi_large.jpg"
+                    />
 
                     <Products
                         handleAddCartItem={handleAddCartItem}
                         productArr={phoneInfo}
                         productImgHeight="250px"
                         productName="iPhone"
-
                     />
                 </div>
             </div>

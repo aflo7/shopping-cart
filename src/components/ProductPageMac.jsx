@@ -80,6 +80,43 @@ function ProductPageMac({ handleAddCartItem }) {
 
             <div className="product-mac-wrapper">
                 <div className="product-mac-content">
+                    <div
+                        style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                            gap: "10px",
+                            marginTop: "40px"
+                        }}
+                    >
+                        <p style={{ color: "rgb(243,103,53)" }}>New</p>
+
+                        <p
+                            style={{
+                                textAlign: "center",
+                                fontSize: "3rem",
+                                fontWeight: "bold"
+                            }}
+                        >
+                            MacBook Air 15”
+                        </p>
+
+                        <p
+                            style={{
+                                textAlign: "center",
+                                fontSize: "1.6rem",
+                                fontWeight: "bold"
+                            }}
+                        >
+                            Impressively big. Impossibly thin.
+                        </p>
+
+                        <p>From $108.25/mo. for 12 mo. or $1299**</p>
+                        <p className="blue-text">Learn more &#62;</p>
+
+                        <img className="mac-img" src="https://www.apple.com/v/mac/home/bu/images/overview/hero/macbook_air__f6z1e32o3866_large.jpg" />
+                    </div>
+
                     <Products
                         handleAddCartItem={handleAddCartItem}
                         productArr={macInfo}
