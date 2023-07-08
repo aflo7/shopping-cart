@@ -1,19 +1,32 @@
 import "../css/cart.css"
+import CartItem from "./CartItem"
+import { motion } from "framer-motion"
 
-function Cart({ cartItems, total }) {
+function Cart({ cartItems, total, handleItemRemove }) {
     return (
-        <div className="cart-wrapper">
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="cart-wrapper"
+        >
             <div className="cart-content">
                 {total > 0 ? (
                     <>
-                        <p style={{ fontSize: "1.8rem", fontWeight: "bold" }}>
-                            Your cart total is ${total}
+                        <p style={{ fontSize: "2rem", fontWeight: "bold" }}>
+                            Review your bag.
                         </p>
 
-                        <p>Free delivery and free returns</p>
+                        <p style={{ fontSize: "1.2rem" }}>
+                            Free delivery and free returns
+                        </p>
 
                         <div className="card-info-wrapper">
-                            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/applecard-logo-201910?wid=164&hei=164&fmt=jpeg&qlt=90&.v=1572631318807" alt="apple-card-logo" height="30px"></img>
+                            <img
+                                src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/applecard-logo-201910?wid=164&hei=164&fmt=jpeg&qlt=90&.v=1572631318807"
+                                alt="apple-card-logo"
+                                height="30px"
+                            ></img>
                             <p>
                                 Items not purchased with a one time payment may
                                 be eligible for $274.83/mo.per month at 0% APR
@@ -22,8 +35,6 @@ function Cart({ cartItems, total }) {
                                 <span className="blue-text">Learn more</span>
                             </p>
                         </div>
-
-                        <button>Check out</button>
                     </>
                 ) : (
                     <p style={{ fontSize: "1.8rem", fontWeight: "bold" }}>
@@ -35,17 +46,21 @@ function Cart({ cartItems, total }) {
                     ? cartItems.map((item, i) => {
                           if (item.qty > 0) {
                               return (
-                                  <div key={i}>
-                                      <p>{item.name}</p>
-                                      <p>{item.qty}</p>
-                                      <p>${item.qty * item.price}</p>
-                                  </div>
+                                  <CartItem
+                                      handleItemRemove={handleItemRemove}
+                                      cartItem={item}
+                                      key={i}
+                                  />
                               )
                           } else return null
                       })
                     : null}
+
+                {total > 0 ? (
+                    <button className="blue-checkout-button">Check out</button>
+                ) : null}
             </div>
-        </div>
+        </motion.div>
     )
 }
 

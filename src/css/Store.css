@@ -48,7 +48,7 @@
 
 .credit-text {
     text-align: center;
-    padding: 10px 20px;
+    padding: 20px 20px;
     background-color: white;
 }
 
@@ -57,7 +57,7 @@
 }
 
 .quick-links-header {
-    font-size: 1.6rem; 
+    font-size: 1.6rem;
     font-weight: bold;
 }
 .quick-link-wrapper {
@@ -89,13 +89,13 @@
     }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1000px) {
     .store-wrapper {
         display: flex;
         justify-content: center;
     }
 
     .store {
-        width: 1200px;
+        width: 1000px;
     }
 }

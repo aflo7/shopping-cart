@@ -1,9 +1,10 @@
 import "../css/product.css"
 
 function Product({ item, handleAddCartItem, productImgHeight }) {
+    const { img, name, desc, price } = item
     return (
         <div className="product">
-            <img src={item.img} alt={item.name} height={productImgHeight} />
+            <img src={img} alt={name} height={productImgHeight} />
             <p
                 style={{
                     fontWeight: "bold",
@@ -12,12 +13,15 @@ function Product({ item, handleAddCartItem, productImgHeight }) {
                     textAlign: "center"
                 }}
             >
-                {item.name}
+                {name}
             </p>
-            <p style={{ width: "150px", textAlign: "center" }}>{item.desc}</p>
-            <p>${item.price}</p>
+            <p style={{ width: "150px", textAlign: "center" }}>{desc}</p>
+            <p>${price}</p>
 
-            <button onClick={() => handleAddCartItem(item.name)}>
+            <button
+                className="add-to-cart-button"
+                onClick={() => handleAddCartItem(name)}
+            >
                 Add to cart
             </button>
             <p className="blue-text">Learn more &#62;</p>

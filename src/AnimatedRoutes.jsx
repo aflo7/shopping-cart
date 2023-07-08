@@ -6,7 +6,12 @@ import ProductPageMac from "./components/ProductPageMac"
 import ProductPagePhone from "./components/ProductPagePhone"
 import Cart from "./components/Cart"
 
-function AnimatedRoutes({ handleAddCartItem, cartItems, total }) {
+function AnimatedRoutes({
+    handleAddCartItem,
+    cartItems,
+    total,
+    handleItemRemove
+}) {
     const location = useLocation()
 
     return (
@@ -29,7 +34,13 @@ function AnimatedRoutes({ handleAddCartItem, cartItems, total }) {
                 />
                 <Route
                     path="/cart"
-                    element={<Cart cartItems={cartItems} total={total} />}
+                    element={
+                        <Cart
+                            cartItems={cartItems}
+                            total={total}
+                            handleItemRemove={handleItemRemove}
+                        />
+                    }
                 />
             </Routes>
         </AnimatePresence>

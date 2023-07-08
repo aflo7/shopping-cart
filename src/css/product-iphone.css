@@ -7,13 +7,13 @@
     gap: 80px;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1000px) {
     .product-iphone-wrapper {
         display: flex;
         justify-content: center;
     }
 
     .product-iphone-content {
-        width: 1200px;
+        width: 1000px;
     }
 }

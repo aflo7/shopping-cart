@@ -13,43 +13,51 @@ const initialCart = [
     {
         name: "iPhone 14 Pro",
         price: 999,
-        qty: 0
+        qty: 0,
+        img: "https://www.apple.com/v/iphone/home/bo/images/overview/compare/compare_iphone_14_pro__cjmfbiggqhpy_large.jpg"
     },
     {
         name: "iPhone 14",
         price: 799,
-        qty: 0
+        qty: 0,
+        img: "https://www.apple.com/v/iphone/home/bo/images/overview/compare/compare_iphone_14__ct4sjk962pea_large.jpg"
     },
     {
         name: "iPhone 13",
         price: 599,
-        qty: 0
+        qty: 0,
+        img: "https://www.apple.com/v/iphone/home/bo/images/overview/compare/compare_iphone_13__fqzwhmfmroey_large.jpg"
     },
     {
         name: "iPhone SE",
         price: 429,
-        qty: 0
+        qty: 0,
+        img: "https://www.apple.com/v/iphone/home/bo/images/overview/compare/compare_iphone_se__d5blqx1pgymq_large.jpg"
     },
 
     {
         name: "MacBook Air 13”",
         price: 999,
-        qty: 0
+        qty: 0,
+        img: "https://www.apple.com/v/mac/home/bu/images/overview/compare/compare_mba_m1__9d4o64w6wv6m_large_2x.png"
     },
     {
         name: "MacBook Air 13” and 15”",
         price: 1099,
-        qty: 0
+        qty: 0,
+        img: "https://www.apple.com/v/mac/home/bu/images/overview/compare/compare_mba_13_15__beo01ewpngky_large_2x.png"
     },
     {
         name: "MacBook Pro 13”",
         price: 1299,
-        qty: 0
+        qty: 0,
+        img: "https://www.apple.com/v/mac/home/bu/images/overview/compare/compare_mbp_13__b9nj45t4tcya_large_2x.png"
     },
     {
         name: "MacBook Pro 14” and 16”",
         price: 1999,
-        qty: 0
+        qty: 0,
+        img: "https://www.apple.com/v/mac/home/bu/images/overview/compare/compare_mbp_14_16__gmrk71zzfoq6_large_2x.png"
     }
 ]
 
@@ -69,6 +77,16 @@ function App() {
                 }
             })
         )
+    }
+
+    function handleItemRemove(itemName) {
+        const currentCartItems = [...cartItems]
+        currentCartItems.forEach(item => {
+            if (item.name === itemName) {
+                item.qty = 0
+            }
+        })
+        setCartItems(currentCartItems)
     }
 
     useEffect(() => {
@@ -116,6 +134,7 @@ function App() {
                 handleAddCartItem={handleAddCartItem}
                 cartItems={cartItems}
                 total={total}
+                handleItemRemove={handleItemRemove}
             />
         </BrowserRouter>
     )

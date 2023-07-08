@@ -6,3 +6,11 @@
     padding-bottom: 20px;
     border-bottom: 1px solid gray;
 }
+
+.add-to-cart-button {
+    color: white;
+    background-color: rgb(48, 111, 219);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 1000px;
+}
