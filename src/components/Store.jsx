@@ -55,10 +55,10 @@ function Store() {
                     </div>
 
                     <div className="products">
-                        <div className="product">
+                        <Link to="/mac" className="product">
                             <img src={storeMac} />
                             <p>Mac</p>
-                        </div>
+                        </Link>
                         <Link to="/iphone" className="product">
                             <img src={storeIphone} />
                             <p>iPhone</p>

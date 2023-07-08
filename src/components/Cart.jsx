@@ -12,7 +12,8 @@ function Cart({ cartItems, total }) {
 
                         <p>Free delivery and free returns</p>
 
-                        <div>
+                        <div className="card-info-wrapper">
+                            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/applecard-logo-201910?wid=164&hei=164&fmt=jpeg&qlt=90&.v=1572631318807" alt="apple-card-logo" height="30px"></img>
                             <p>
                                 Items not purchased with a one time payment may
                                 be eligible for $274.83/mo.per month at 0% APR
