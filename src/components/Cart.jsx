@@ -1,6 +1,7 @@
 import "../css/cart.css"
 import CartItem from "./CartItem"
 import { motion } from "framer-motion"
+import Terms from './Terms'
 
 function Cart({ cartItems, total, handleItemRemove }) {
     return (
@@ -8,7 +9,6 @@ function Cart({ cartItems, total, handleItemRemove }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
-            className="cart-wrapper"
         >
             <div className="cart-content">
                 {total > 0 ? (
@@ -60,6 +60,8 @@ function Cart({ cartItems, total, handleItemRemove }) {
                     <button className="blue-checkout-button">Check out</button>
                 ) : null}
             </div>
+
+            <Terms />
         </motion.div>
     )
 }

@@ -2,6 +2,7 @@ import "../css/product-page-mac.css"
 import NavProducts from "./NavProducts"
 import Products from "./Products"
 import { motion } from "framer-motion"
+import Terms from "./Terms"
 const macInfo = [
     {
         name: "MacBook Air 13”",
@@ -125,6 +126,8 @@ function ProductPageMac({ handleAddCartItem }) {
                     />
                 </div>
             </div>
+
+            <Terms />
         </motion.div>
     )
 }

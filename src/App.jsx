@@ -81,7 +81,7 @@ function App() {
 
     function handleItemRemove(itemName) {
         const currentCartItems = [...cartItems]
-        currentCartItems.forEach(item => {
+        currentCartItems.forEach((item) => {
             if (item.name === itemName) {
                 item.qty = 0
             }
@@ -136,6 +136,8 @@ function App() {
                 total={total}
                 handleItemRemove={handleItemRemove}
             />
+
+            
         </BrowserRouter>
     )
 }

@@ -21,3 +21,14 @@ nav {
     background-color: white;
     background-color: rgb(245, 245, 247);
 }
+
+@media screen and (min-width: 1000px) {
+    nav {
+        width: 1000px;
+    }
+
+    .nav-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+}

@@ -2,6 +2,8 @@ import "../css/product-iphone.css"
 import Products from "./Products"
 import NavProducts from "./NavProducts"
 import { motion } from "framer-motion"
+import Terms from './Terms'
+
 const phoneInfo = [
     {
         name: "iPhone 14 Pro",
@@ -118,6 +120,8 @@ function ProductPagePhone({ handleAddCartItem }) {
                     />
                 </div>
             </div>
+
+            {/* <Terms /> */}
         </motion.div>
     )
 }

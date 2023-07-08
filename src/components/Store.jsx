@@ -5,6 +5,7 @@ import storeIphone from "../images/storeiphone.png"
 import storeIpad from "../images/storeipad.png"
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
+import Terms from "./Terms"
 
 function Store() {
     return (
@@ -20,7 +21,7 @@ function Store() {
             </p>
 
             <div className="store-wrapper">
-                <div className="store">
+                <div className="store-content">
                     <div className="store-top">
                         <div>
                             <p className="store-header">
@@ -89,6 +90,40 @@ function Store() {
                     </div>
                 </div>
             </div>
+
+            <div className="store-wrapper">
+                <div className="store-content" style={{ padding: "0px" }}>
+                    <div className="carousel-1">
+                        <div>
+                            <p>IPHONE 14 PRO</p>
+                            <p>Pro. Beyond.</p>
+                            <p>
+                                From $999 or $41.62/mo. for 24 months before
+                                trade-in
+                            </p>
+                        </div>
+                        <div>
+                            <p>MACBOOK AIR 15”</p>
+                            <p>Impressively big. Impossibly thin.</p>
+                            <p>From $1299 or $108.25/mo. for 12 months</p>
+                        </div>
+
+                        <div>
+                            <p>MAC STUDIO</p>
+                            <p>Supercharged by M2 Max and M2 Ultra.</p>
+                            <p>From $1999 or $166.58/mo. for 12 months</p>
+                        </div>
+
+                        <div>
+                            <p>MAC STUDIO</p>
+                            <p>Supercharged by M2 Max and M2 Ultra.</p>
+                            <p>From $1999 or $166.58/mo. for 12 months</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <Terms />
         </motion.div>
     )
 }

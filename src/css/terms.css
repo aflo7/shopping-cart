@@ -1,0 +1,19 @@
+@media screen and (min-width: 1000px) {
+    .terms-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .terms-content {
+        width: 1000px;
+    }
+}
+.terms-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.terms-wrapper {
+    background-color: rgb(245, 245, 247);
+}
