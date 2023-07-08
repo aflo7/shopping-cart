@@ -98,7 +98,7 @@ function App() {
     }, [cartItems])
 
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/shopping-cart">
             <div className="nav-wrapper">
                 <nav>
                     <div className="nav-left">
