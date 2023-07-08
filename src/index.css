@@ -72,6 +72,11 @@ h6 {
 .blue-text {
     color: rgb(9, 94, 192);
     cursor: pointer;
+
+}
+
+.blue-text:hover {
+    text-decoration: underline;
 }
 
 button {
@@ -100,19 +105,6 @@ main {
 }
 
 @media screen and (min-width: 1200px) {
-    /* 
-    
-    main {
-        display: flex;
-        justify-content: center;
-
-    }
-
-    .content-wrapper {
-        width: 1200px;
-    } 
-    
-    */
 
     nav {
         width: 1200px;
