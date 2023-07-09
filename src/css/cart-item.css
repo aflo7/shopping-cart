@@ -1,14 +1,22 @@
 .cart-item {
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 
 .cart-item-img-wrapper {
     height: 160px;
-    width: 210px;
-    display: flex;
+    width: 160px;
     justify-content: center;
     align-items: center;
+    display: none;
+}
+
+@media screen and (min-width: 1000px) {
+    .cart-item-img-wrapper {
+    display: flex;
+
+    }
 }
 .cart-item-img {
     max-height: 70%;
