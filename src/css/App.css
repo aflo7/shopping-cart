@@ -8,7 +8,7 @@ nav {
 .nav-right,
 .nav-left {
     display: flex;
-    gap: 30px;
+    gap: 15px;
 }
 
 .nav-wrapper {
@@ -22,6 +22,10 @@ nav {
     background-color: rgb(245, 245, 247);
 }
 
+.search-icon {
+    display: none;
+}
+
 @media screen and (min-width: 1000px) {
     nav {
         width: 1000px;
@@ -31,4 +35,16 @@ nav {
         display: flex;
         justify-content: center;
     }
+
+    .search-icon {
+        display: block;
+    }
+
+    .nav-right,
+    .nav-left {
+        display: flex;
+        gap: 30px;
+    }
+
+
 }

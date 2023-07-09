@@ -121,7 +121,7 @@ function App() {
                     </div>
 
                     <div className="nav-right">
-                        <AiOutlineSearch />
+                        <AiOutlineSearch className="search-icon"/>
 
                         <Link to="/cart" element={<Cart />}>
                             <AiOutlineShoppingCart />
