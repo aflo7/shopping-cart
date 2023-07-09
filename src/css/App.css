@@ -18,8 +18,14 @@ nav {
 .credit-text-grey-bg {
     text-align: center;
     padding: 20px 20px;
-    background-color: white;
     background-color: rgb(245, 245, 247);
+}
+
+.credit-text-darkgray-bg {
+    text-align: center;
+    padding: 20px 20px;
+    background-color: rgb(27, 27, 29);
+    color: white;
 }
 
 .search-icon {
@@ -45,6 +51,4 @@ nav {
         display: flex;
         gap: 30px;
     }
-
-
 }

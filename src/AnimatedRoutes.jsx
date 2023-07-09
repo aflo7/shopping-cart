@@ -5,6 +5,7 @@ import Store from "./components/Store"
 import ProductPageMac from "./components/ProductPageMac"
 import ProductPagePhone from "./components/ProductPagePhone"
 import Cart from "./components/Cart"
+import ProductPagePad from "./components/ProductPagePad"
 
 function AnimatedRoutes({
     handleAddCartItem,
@@ -32,6 +33,7 @@ function AnimatedRoutes({
                         />
                     }
                 />
+                <Route path="/ipad" element={<ProductPagePad handleAddCartItem={handleAddCartItem}/>} />
                 <Route
                     path="/cart"
                     element={

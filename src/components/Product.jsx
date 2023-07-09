@@ -2,7 +2,12 @@ import "../css/product.css"
 import { useNavigate } from "react-router-dom"
 import { useState } from "react"
 
-function Product({ item, handleAddCartItem, productImgHeight }) {
+function Product({
+    item,
+    handleAddCartItem,
+    productImgHeight,
+    lighterBlueText
+}) {
     const { img, name, desc, price } = item
     const navigate = useNavigate()
     const [loading, setLoading] = useState(false)
@@ -33,9 +38,11 @@ function Product({ item, handleAddCartItem, productImgHeight }) {
                 onClick={() => animateAddToCart(name)}
                 disabled={loading}
             >
-                {loading ? "Adding...": "Add to cart"}
+                {loading ? "Adding..." : "Add to cart"}
             </button>
-            <p className="blue-text">Learn more &#62;</p>
+            <p className={lighterBlueText ? "blue-text-lighter" : "blue-text"}>
+                Learn more &#62;
+            </p>
         </div>
     )
 }

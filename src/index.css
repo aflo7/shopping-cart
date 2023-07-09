@@ -72,10 +72,18 @@ h6 {
 .blue-text {
     color: rgb(9, 94, 192);
     cursor: pointer;
+}
 
+.blue-text-lighter {
+    color: rgb(95, 170, 255);
+    cursor: pointer;
 }
 
 .blue-text:hover {
+    text-decoration: underline;
+}
+
+.blue-text-lighter:hover {
     text-decoration: underline;
 }
 
@@ -108,5 +116,4 @@ main {
     body {
         font-size: 1.2rem;
     }
-    
 }

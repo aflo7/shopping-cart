@@ -4,7 +4,8 @@ function Products({
     handleAddCartItem,
     productArr,
     productImgHeight,
-    productName
+    productName,
+    lighterBlueText
 }) {
     return (
         <div className="products-wrapper">
@@ -25,6 +26,7 @@ function Products({
                             item={item}
                             handleAddCartItem={handleAddCartItem}
                             productImgHeight={productImgHeight}
+                            lighterBlueText={lighterBlueText}
                         />
                     )
                 })}

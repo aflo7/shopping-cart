@@ -115,7 +115,7 @@ function ProductPagePhone({ handleAddCartItem }) {
                     <Products
                         handleAddCartItem={handleAddCartItem}
                         productArr={phoneInfo}
-                        productImgHeight="150px"
+                        productImgHeight="200px"
                         productName="iPhone"
                     />
                 </div>

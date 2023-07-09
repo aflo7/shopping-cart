@@ -58,6 +58,37 @@ const initialCart = [
         price: 1999,
         qty: 0,
         img: "https://www.apple.com/v/mac/home/bu/images/overview/compare/compare_mbp_14_16__gmrk71zzfoq6_large_2x.png"
+    },
+
+    {
+        name: "iPad Pro",
+        price: 799,
+        qty: 0,
+        img: "https://www.apple.com/v/ipad/home/cf/images/overview/compare_ipad_pro__erf9x8mw04sy_large.png"
+    },
+    {
+        name: "iPad Air",
+        price: 599,
+        qty: 0,
+        img: "https://www.apple.com/v/ipad/home/cf/images/overview/compare_ipad_air__bxjv33pk6nte_large.png"
+    },
+    {
+        name: "iPad 10",
+        price: 449,
+        qty: 0,
+        img: "https://www.apple.com/v/ipad/home/cf/images/overview/compare_ipad_10_9__f7p2wja0gwuy_large.png"
+    },
+    {
+        name: "iPad 9",
+        price: 329,
+        qty: 0,
+        img: "https://www.apple.com/v/ipad/home/cf/images/overview/compare_ipad_10_2__fwgwy7jydtea_large.png"
+    },
+    {
+        name: "iPad mini",
+        price: 499,
+        qty: 0,
+        img: "https://www.apple.com/v/ipad/home/cf/images/overview/compare_ipad_mini__czcsk9ukpeie_large.png"
     }
 ]
 
@@ -121,7 +152,7 @@ function App() {
                     </div>
 
                     <div className="nav-right">
-                        <AiOutlineSearch className="search-icon"/>
+                        <AiOutlineSearch className="search-icon" />
 
                         <Link to="/cart" element={<Cart />}>
                             <AiOutlineShoppingCart />
@@ -136,8 +167,6 @@ function App() {
                 total={total}
                 handleItemRemove={handleItemRemove}
             />
-
-            
         </BrowserRouter>
     )
 }
