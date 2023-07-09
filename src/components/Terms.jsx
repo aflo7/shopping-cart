@@ -7,7 +7,6 @@ function Terms() {
         <div className="terms-wrapper">
             <div
                 className="terms-content"
-                style={{ fontSize: "0.9rem", color: "gray", padding: '20px 20px' }}
             >
                 <p>
                     * Pricing for iPhone 14 and iPhone 14 Plus includes a $30
@@ -98,11 +97,11 @@ function Terms() {
                         only available when you select Citizens One or Apple
                         Card Monthly Installments (ACMI) as a payment option at
                         checkout. Subject to credit approval and credit limit.
-                        Currently, carrier connection with AT&T, T‑Mobile, or
+                        Currently, carrier connection with AT&T, T-Mobile, or
                         Verizon is required for all iPhone purchases made with
                         ACMI from Apple Store locations only. Starting August
                         15, 2023, iPhone activation required with AT&T,
-                        T‑Mobile, or Verizon for purchases made with ACMI at
+                        T-Mobile, or Verizon for purchases made with ACMI at
                         Apple Store locations, apple.com, the Apple Store app,
                         or by calling 1-800-MY-APPLE. Taxes and shipping are not
                         included in ACMI and are subject to your card&apos;s variable
@@ -110,8 +109,8 @@ function Terms() {
                         are in the Apple Card Customer Agreement. Additional
                         iPhone Payments terms are here. ACMI is not available
                         for purchases made online at special storefronts or on
-                        refurbished devices. The last month’s payment for each
-                        product will be the product’s purchase price, less all
+                        refurbished devices. The last month&apos;s payment for each
+                        product will be the product&apos;s purchase price, less all
                         other payments at the monthly payment amount. ACMI
                         financing is subject to change at any time for any
                         reason, including but not limited to, installment term

@@ -1,6 +1,5 @@
 import "../css/cart-item.css"
 import { useState } from "react"
-import loadingGif from "../images/loading.gif"
 
 function CartItem({ handleItemRemove, cartItem }) {
     const [removing, setRemoving] = useState(false)
@@ -34,11 +33,7 @@ function CartItem({ handleItemRemove, cartItem }) {
                             }}
                         >
                             {removing ? (
-                                <img
-                                    height="20px"
-                                    src={loadingGif}
-                                    alt="Loading icon"
-                                />
+                                "Removing..."
                             ) : (
                                 "Remove"
                             )}

@@ -1,7 +1,6 @@
 import "../css/product.css"
 import { useNavigate } from "react-router-dom"
 import { useState } from "react"
-import loading from '../images/loading.gif'
 
 function Product({ item, handleAddCartItem, productImgHeight }) {
     const { img, name, desc, price } = item
