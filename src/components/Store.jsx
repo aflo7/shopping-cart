@@ -12,7 +12,7 @@ function Store() {
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 1 }}
         >
             <p className="credit-text">
                 Get $200-$640 in credit toward iPhone 14 or iPhone 14 Pro when
@@ -64,10 +64,10 @@ function Store() {
                             <img src={storeIphone} />
                             <p>iPhone</p>
                         </Link>
-                        <div className="mini-product">
+                        <Link to="/ipad" className="mini-product">
                             <img src={storeIpad} />
                             <p>iPad</p>
-                        </div>
+                        </Link>
                     </div>
 
                     <div>

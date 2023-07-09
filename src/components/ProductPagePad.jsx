@@ -74,7 +74,7 @@ function ProductPagePad({ handleAddCartItem }) {
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 1 }}
             style={{ backgroundColor: "black", color: "white" }}
         >
             <NavProducts navProductInfo={navPadInfo} />

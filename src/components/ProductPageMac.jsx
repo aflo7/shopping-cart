@@ -70,7 +70,7 @@ function ProductPageMac({ handleAddCartItem }) {
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 1 }}
         >
             <NavProducts navProductInfo={navMacInfo} />
             <p className="credit-text-grey-bg">

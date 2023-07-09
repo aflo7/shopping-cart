@@ -18,6 +18,7 @@
 
 .mini-products {
     display: flex;
+    gap: 10px;
 }
 
 .mini-products p {
@@ -26,7 +27,7 @@
 }
 
 .mini-products img {
-    height: 80px;
+    height: 60px;
 }
 .mini-products .mini-product {
     display: flex;
