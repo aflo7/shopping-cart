@@ -10,7 +10,7 @@ function CartItem({ handleItemRemove, cartItem }) {
         setRemoving(true)
         setTimeout(() => {
             handleItemRemove(itemName)
-        }, 1500)
+        }, 1000)
     }
     return (
         <div>

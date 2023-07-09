@@ -16,19 +16,19 @@
     gap: 10px;
 }
 
-.products {
+.mini-products {
     display: flex;
 }
 
-.products p {
+.mini-products p {
     text-align: center;
     font-weight: bold;
 }
 
-.products img {
+.mini-products img {
     height: 80px;
 }
-.products .product {
+.mini-products .mini-product {
     display: flex;
     flex-direction: column;
     gap: 10px;

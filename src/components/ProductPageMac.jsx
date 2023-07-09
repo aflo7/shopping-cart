@@ -88,7 +88,6 @@ function ProductPageMac({ handleAddCartItem }) {
                             alignItems: "center",
                             gap: "10px",
                             marginTop: "40px",
-                            // padding: '0px 20px'
                         }}
                     >
                         <p style={{ color: "rgb(243,103,53)" }}>New</p>
