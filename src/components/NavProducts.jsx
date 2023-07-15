@@ -5,7 +5,7 @@ function NavProducts({ navProductInfo }) {
             <div className="top-nav-products">
                 {navProductInfo.map((item, i) => {
                     return (
-                        <div key={i}>
+                        <div key={i} style={{flexShrink: '0'}}>
                             <img src={item.img} alt={item.name} height="50px" />
                             <p style={{ fontSize: "0.8rem" }}>{item.name}</p>
                         </div>

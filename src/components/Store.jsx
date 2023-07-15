@@ -78,16 +78,6 @@ function Store() {
                             </span>
                         </p>
                     </div>
-
-                    <div className="quick-link-wrapper">
-                        <p className="quick-links-header">Quick Links</p>
-                        <div className="quick-link-btn-wrapper">
-                            <button>Order Status</button>
-                            <button>Shopping Help</button>
-                            <button>Returns</button>
-                            <button>Your Saves</button>
-                        </div>
-                    </div>
                 </div>
             </div>
 
@@ -122,7 +112,19 @@ function Store() {
                     </div>
                 </div>
             </div>
-
+            <div className="store-wrapper">
+                <div className="store-content">
+                    <div className="quick-link-wrapper">
+                        <p className="quick-links-header">Quick Links</p>
+                        <div className="quick-link-btn-wrapper">
+                            <button>Order Status</button>
+                            <button>Shopping Help</button>
+                            <button>Returns</button>
+                            <button>Your Saves</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <Terms />
         </motion.div>
     )

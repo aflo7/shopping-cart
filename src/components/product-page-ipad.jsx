@@ -70,86 +70,98 @@ const navPadInfo = [
 
 function ProductPagePad({ handleAddCartItem }) {
     return (
-        <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-            style={{ backgroundColor: "black", color: "white" }}
+        <div
+            style={{
+                backgroundColor: "black",
+                color: "white"
+            }}
         >
-            <NavProducts navProductInfo={navPadInfo} />
+            <motion.div
+                style={{ position: "relative" }}
+                initial={{ left: '1000px' }}
+                animate={{ left: '0px' }}
+                transition={{ duration: '0.5'}}
+            >
+                <NavProducts navProductInfo={navPadInfo} />
+            </motion.div>
 
-            <p className="credit-text-darkgray-bg">
-                Save on Mac or iPad with education pricing. Plus get a gift card
-                up to $150.
-                <span className="blue-text-lighter"> Shop now &#62;</span>
-            </p>
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1 }}
+            >
+                <p className="credit-text-darkgray-bg">
+                    Save on Mac or iPad with education pricing. Plus get a gift
+                    card up to $150.
+                    <span className="blue-text-lighter"> Shop now &#62;</span>
+                </p>
 
-            <div className="flex-group">
-                <img
-                    src="https://www.apple.com/v/ipad/home/cf/images/overview/hero/fcp_ipad_hero__e663fdl2htea_large.png"
-                    height="80%"
-                />
-                <div
-                    style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "center",
-                        gap: "20px",
-                        marginTop: "40px",
-                        width: "400px",
-                        flexShrink: 0
-                    }}
-                >
-                    <p>Introducing</p>
-
-                    <p
-                        style={{
-                            textAlign: "center",
-                            fontSize: "3rem",
-                            fontWeight: "bold"
-                        }}
-                    >
-                        Final Cut Pro and Logic Pro for iPad
-                    </p>
-
-                    <p className="blue-text-lighter">
-                        Learn more about Final Cut Pro for iPad &#62;
-                    </p>
-                    <p className="blue-text-lighter">
-                        Learn more about Logic Pro for iPad &#62;
-                    </p>
+                <div className="flex-group">
+                    <img
+                        src="https://www.apple.com/v/ipad/home/cf/images/overview/hero/fcp_ipad_hero__e663fdl2htea_large.png"
+                        height="80%"
+                    />
                     <div
-                        className="blue-text-lighter"
                         style={{
                             display: "flex",
+                            flexDirection: "column",
                             alignItems: "center",
-                            gap: "5px"
+                            gap: "20px",
+                            marginTop: "40px",
+                            width: "400px",
+                            flexShrink: 0
                         }}
                     >
-                        <p>Watch the film</p>
-                        <AiOutlinePlayCircle />
+                        <p>Introducing</p>
+
+                        <p
+                            style={{
+                                textAlign: "center",
+                                fontSize: "3rem",
+                                fontWeight: "bold"
+                            }}
+                        >
+                            Final Cut Pro and Logic Pro for iPad
+                        </p>
+
+                        <p className="blue-text-lighter">
+                            Learn more about Final Cut Pro for iPad &#62;
+                        </p>
+                        <p className="blue-text-lighter">
+                            Learn more about Logic Pro for iPad &#62;
+                        </p>
+                        <div
+                            className="blue-text-lighter"
+                            style={{
+                                display: "flex",
+                                alignItems: "center",
+                                gap: "5px"
+                            }}
+                        >
+                            <p>Watch the film</p>
+                            <AiOutlinePlayCircle />
+                        </div>
                     </div>
-                </div>
 
-                <img
-                    src="https://www.apple.com/v/ipad/home/cf/images/overview/hero/lp_ipad_hero__ec9vtoqzs0a6_large.png"
-                    height="80%"
-                />
-            </div>
-
-            <div className="product-pad-wrapper">
-                <div className="product-pad-content">
-                    <Products
-                        handleAddCartItem={handleAddCartItem}
-                        productArr={padInfo}
-                        productImgHeight="160px"
-                        productName="iPad"
-                        lighterBlueText="true"
+                    <img
+                        src="https://www.apple.com/v/ipad/home/cf/images/overview/hero/lp_ipad_hero__ec9vtoqzs0a6_large.png"
+                        height="80%"
                     />
                 </div>
-            </div>
 
-        </motion.div>
+                <div className="product-pad-wrapper">
+                    <div className="product-pad-content">
+                        <Products
+                            handleAddCartItem={handleAddCartItem}
+                            productArr={padInfo}
+                            productImgHeight="160px"
+                            productName="iPad"
+                            lighterBlueText="true"
+                        />
+                    </div>
+                </div>
+            </motion.div>
+        </div>
     )
 }
 
