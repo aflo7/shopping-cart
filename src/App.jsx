@@ -1,11 +1,5 @@
-import { BrowserRouter, Link } from "react-router-dom"
-import {
-    AiOutlineShoppingCart,
-    AiOutlineSearch,
-    AiFillApple
-} from "react-icons/ai"
+import { BrowserRouter as Router } from "react-router-dom"
 import "./css/App.css"
-import Cart from "./components/Cart"
 import { useEffect, useState } from "react"
 import AnimatedRoutes from "./AnimatedRoutes"
 
@@ -129,45 +123,14 @@ function App() {
     }, [cartItems])
 
     return (
-        <BrowserRouter basename="/shopping-cart">
-            <div className="nav-wrapper">
-                <nav>
-                    <div className="nav-left">
-                        <AiFillApple />
-                        <Link to="/">
-                            <p>Store</p>
-                        </Link>
-
-                        <Link to="/mac">
-                            <p>Mac</p>
-                        </Link>
-
-                        <Link to="/ipad">
-                            <p>iPad</p>
-                        </Link>
-
-                        <Link to="/iphone">
-                            <p>iPhone</p>
-                        </Link>
-                    </div>
-
-                    <div className="nav-right">
-                        <AiOutlineSearch className="search-icon" />
-
-                        <Link to="/cart" element={<Cart />}>
-                            <AiOutlineShoppingCart />
-                        </Link>
-                    </div>
-                </nav>
-            </div>
-
+        <Router basename="/shopping-cart">
             <AnimatedRoutes
                 handleAddCartItem={handleAddCartItem}
                 cartItems={cartItems}
                 total={total}
                 handleItemRemove={handleItemRemove}
             />
-        </BrowserRouter>
+        </Router>
     )
 }
 

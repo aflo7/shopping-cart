@@ -14,8 +14,7 @@
 
 @media screen and (min-width: 1000px) {
     .cart-item-img-wrapper {
-    display: flex;
-
+        display: flex;
     }
 }
 .cart-item-img {
@@ -40,7 +39,7 @@
 }
 
 .cart-item-info-left {
-    width: 250px;
+    width: 150px;
 }
 
 .cart-item-info-price {
@@ -61,4 +60,6 @@
     border: none;
     width: fit-content;
     background-color: white;
+    padding: 0;
+    margin: 0;
 }

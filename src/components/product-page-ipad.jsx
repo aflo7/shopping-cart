@@ -1,6 +1,5 @@
 import { motion } from "framer-motion"
 import NavProducts from "./NavProducts"
-import Terms from "./Terms"
 import Products from "./Products"
 import "../css/product-page-pad.css"
 import { AiOutlinePlayCircle } from "react-icons/ai"
@@ -150,7 +149,6 @@ function ProductPagePad({ handleAddCartItem }) {
                 </div>
             </div>
 
-            <Terms />
         </motion.div>
     )
 }
