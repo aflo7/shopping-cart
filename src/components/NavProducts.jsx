@@ -8,10 +8,11 @@ function NavProducts({ navProductInfo, backgroundColor }) {
             style={{
                 zIndex: "1",
                 backgroundColor: backgroundColor,
-                position: 'relative'
+                position: "relative"
             }}
         >
             <motion.div
+                style={{ position: "relative" }}
                 initial={{ left: "1000px" }}
                 animate={{ left: "0px" }}
                 transition={{ duration: "0.5" }}
