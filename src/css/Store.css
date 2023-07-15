@@ -18,7 +18,7 @@
 
 .mini-products {
     display: flex;
-    gap: 10px;
+    gap: 15px;
 }
 
 .mini-products p {
@@ -29,6 +29,7 @@
 .mini-products img {
     height: 60px;
 }
+
 .mini-products .mini-product {
     display: flex;
     flex-direction: column;
