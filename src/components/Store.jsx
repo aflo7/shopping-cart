@@ -5,7 +5,6 @@ import storeIphone from "../images/storeiphone.png"
 import storeIpad from "../images/storeipad.png"
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
-import Terms from "./Terms"
 
 function Store() {
     return (
@@ -125,7 +124,6 @@ function Store() {
                     </div>
                 </div>
             </div>
-            <Terms />
         </motion.div>
     )
 }

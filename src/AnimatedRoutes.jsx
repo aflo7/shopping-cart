@@ -11,7 +11,7 @@ import {
     AiOutlineSearch,
     AiFillApple
 } from "react-icons/ai"
-import Terms from "./components/Terms"
+import Footer from "./components/Footer"
 
 function AnimatedRoutes({
     handleAddCartItem,
@@ -101,7 +101,7 @@ function AnimatedRoutes({
                 />
             </Routes>
 
-            <Terms />
+            <Footer />
         </AnimatePresence>
     )
 }
