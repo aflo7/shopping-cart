@@ -4,8 +4,20 @@ import Products from "./Products"
 import "../css/product-page-ipad.css"
 import { AiOutlinePlayCircle } from "react-icons/ai"
 import productInfo from "../assets/fonts/product-info/product-info"
+import { useState, useEffect } from "react"
+
 
 function ProductPagePad({ handleAddCartItem }) {
+
+    const [saveColor, setSaveColor] = useState("rgb(9, 94, 192)")
+
+    useEffect(() => {
+      setTimeout(() => {
+        setSaveColor("")
+      }, 2000);
+    }, [])
+    
+
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -16,19 +28,23 @@ function ProductPagePad({ handleAddCartItem }) {
                 color: "white"
             }}
         >
+            <NavProducts
+                backgroundColor="black"
+                navProductInfo={productInfo.navPadInfo}
+            />
+
             <motion.div
-                style={{ position: "relative" }}
-                initial={{ left: "1000px" }}
-                animate={{ left: "0px" }}
-                transition={{ duration: "0.5" }}
+                style={{ position: "relative", backgroundColor: saveColor }}
+                initial={{ top: "-100px" }}
+                animate={{ top: "0px" }}
+                transition={{ duration: 1 }}
+                id="saveWrapper"
+                className="credit-text-darkgray-bg"
             >
-                <NavProducts navProductInfo={productInfo.navPadInfo} />
-            </motion.div>
-            <p className="credit-text-darkgray-bg">
                 Save on Mac or iPad with education pricing. Plus get a gift card
                 up to $150.
                 <span className="blue-text-lighter"> Shop now &#62;</span>
-            </p>
+            </motion.div>
 
             <div className="flex-group">
                 <img
@@ -38,10 +54,7 @@ function ProductPagePad({ handleAddCartItem }) {
                 <div className="center-text">
                     <p>Introducing</p>
 
-                    <p
-                    className="center-text-header"
-                       
-                    >
+                    <p className="center-text-header">
                         Final Cut Pro and Logic Pro for iPad
                     </p>
 

@@ -24,5 +24,6 @@
 
     .top-nav-products {
         width: 1000px;
+        justify-content: center;
     }
 }

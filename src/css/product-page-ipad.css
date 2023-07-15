@@ -68,3 +68,7 @@
         display: none;
     }
 }
+
+#saveWrapper {
+    transition: background-color 1s;
+}
