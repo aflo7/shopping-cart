@@ -3,7 +3,7 @@ import NavProducts from "./NavProducts"
 import Products from "./Products"
 import "../css/product-page-ipad.css"
 import { AiOutlinePlayCircle } from "react-icons/ai"
-import productInfoIpad from "../assets/fonts/product-info/product-info-ipad"
+import productInfo from "../assets/fonts/product-info/product-info"
 
 function ProductPagePad({ handleAddCartItem }) {
     return (
@@ -22,7 +22,7 @@ function ProductPagePad({ handleAddCartItem }) {
                 animate={{ left: "0px" }}
                 transition={{ duration: "0.5" }}
             >
-                <NavProducts navProductInfo={productInfoIpad.navPadInfo} />
+                <NavProducts navProductInfo={productInfo.navPadInfo} />
             </motion.div>
             <p className="credit-text-darkgray-bg">
                 Save on Mac or iPad with education pricing. Plus get a gift card
@@ -79,7 +79,7 @@ function ProductPagePad({ handleAddCartItem }) {
                 <div className="product-pad-content">
                     <Products
                         handleAddCartItem={handleAddCartItem}
-                        productArr={productInfoIpad.padInfo}
+                        productArr={productInfo.padInfo}
                         productImgHeight="160px"
                         productName="iPad"
                         lighterBlueText="true"

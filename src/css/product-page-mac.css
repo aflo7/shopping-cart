@@ -3,6 +3,10 @@
     flex-direction: column;
     gap: 80px;
     padding: 0px 20px;
+    padding-top: 60px;
+}
+.mac-img {
+    padding: 160px 20px;
 }
 
 @media screen and (min-width: 1000px) {
@@ -16,6 +20,3 @@
     }
 }
 
-.mac-img {
-    padding: 160px 20px;
-}

@@ -1,7 +1,6 @@
 import "../css/cart.css"
 import CartItem from "./CartItem"
 import { motion } from "framer-motion"
-import Terms from './Terms'
 
 function Cart({ cartItems, total, handleItemRemove }) {
     return (
@@ -61,7 +60,6 @@ function Cart({ cartItems, total, handleItemRemove }) {
                 ) : null}
             </div>
 
-            <Terms />
         </motion.div>
     )
 }
