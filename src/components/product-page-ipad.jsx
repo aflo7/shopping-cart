@@ -14,7 +14,7 @@ function ProductPagePad({ handleAddCartItem }) {
     useEffect(() => {
       setTimeout(() => {
         setSaveColor("")
-      }, 2000);
+      }, 1500);
     }, [])
     
 
