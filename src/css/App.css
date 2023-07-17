@@ -13,6 +13,12 @@ nav {
 
 .nav-wrapper {
     background-color: rgb(245, 245, 247);
+    position: relative;
+    z-index: 1;
+}
+
+#saveWrapper {
+    transition: background-color 0.5s;
 }
 
 .credit-text-grey-bg {

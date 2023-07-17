@@ -5,19 +5,42 @@ import storeIphone from "../images/storeiphone.png"
 import storeIpad from "../images/storeipad.png"
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
+import { useState, useEffect } from "react"
 
 function Store() {
+    const [saveColor, setSaveColor] = useState("rgb(9, 94, 192)")
+    const [textColor, setTextColor] = useState("white")
+
+    useEffect(() => {
+        setTimeout(() => {
+            setSaveColor("")
+            setTextColor("")
+        }, 1500)
+    }, [])
+
     return (
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
+            style={{ backgroundColor: "rgb(245, 245, 247)" }}
         >
-            <p className="credit-text">
+            <motion.div
+                style={{
+                    position: "relative",
+                    backgroundColor: saveColor,
+                    color: textColor
+                }}
+                initial={{ top: "-100px" }}
+                animate={{ top: "0px" }}
+                transition={{ duration: 1 }}
+                className="credit-text"
+                id="saveWrapper"
+            >
                 Get $200-$640 in credit toward iPhone 14 or iPhone 14 Pro when
                 you trade in iPhone 11 or higher.{" "}
                 <span className="blue-text">Shop iPhone &#62;</span>
-            </p>
+            </motion.div>
 
             <div className="store-wrapper">
                 <div className="store-content">
@@ -80,9 +103,9 @@ function Store() {
                 </div>
             </div>
 
-            <div className="store-wrapper">
-                <div className="store-content" style={{ padding: "0px" }}>
-                    <div className="carousel-1">
+            <div className="carousel-1-wrapper">
+                <div className="carousel-1">
+                    <div className="carousel-1-inner">
                         <div>
                             <p>IPHONE 14 PRO</p>
                             <p>Pro. Beyond.</p>

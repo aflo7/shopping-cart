@@ -2,7 +2,7 @@
     padding: 10px 20px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 60px;
 }
 
 .help-wrapper {
@@ -54,10 +54,6 @@
     background-color: white;
 }
 
-.store-wrapper {
-    background-color: rgb(245, 245, 247);
-}
-
 .quick-links-header {
     font-size: 1.6rem;
     font-weight: bold;
@@ -102,16 +98,15 @@
     }
 }
 
-.carousel-1 {
+.carousel-1-inner {
     padding: 30px 20px;
     display: flex;
     gap: 20px;
     overflow-x: scroll;
     background-color: rgb(245, 245, 247);
-
 }
 
-.carousel-1 > div {
+.carousel-1-inner > div {
     flex-grow: 0;
     flex-shrink: 0;
     display: flex;
@@ -128,27 +123,44 @@
     background-size: cover;
 }
 
-.carousel-1 > div:hover {
+.carousel-1-inner > div:hover {
     box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.1);
     transform: scale(1.01);
     transition: 1s;
 }
 
-.carousel-1 div:nth-child(1) {
+.carousel-1-inner div:nth-child(1) {
     color: white;
     background-image: url(https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-40-iphone-14-pro-202303?wid=400&hei=500&fmt=p-jpg&qlt=95&.v=1677311465897);
 }
 
-.carousel-1 div:nth-child(2) {
+.carousel-1-inner div:nth-child(2) {
     background-image: url(https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-40-macbook-air-202306?wid=400&hei=500&fmt=p-jpg&qlt=95&.v=1683844828182);
 }
 
-.carousel-1 div:nth-child(3) {
+.carousel-1-inner div:nth-child(3) {
     background-image: url(https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-40-mac-studio-202306?wid=400&hei=500&fmt=p-jpg&qlt=95&.v=1683844828120);
-    
 }
 
-.carousel-1 div:nth-child(4) {
+.carousel-1-inner div:nth-child(4) {
     background-image: url(https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/store-card-40-mac-studio-202306?wid=400&hei=500&fmt=p-jpg&qlt=95&.v=1683844828120);
-    
+}
+
+@media screen and (min-width: 1000px) {
+    .carousel-1-wrapper {
+        display: flex;
+        justify-content: center;
+        overflow-x: scroll;
+    }
+
+    .carousel-1 {
+        width: 1000px;
+        background-color: pink;
+        position: relative;
+        height: 560px;
+    }
+
+    .carousel-1-inner {
+        position: absolute;
+    }
 }
