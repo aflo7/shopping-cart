@@ -3,6 +3,7 @@ import "./css/App.css"
 import { useEffect, useState } from "react"
 import AnimatedRoutes from "./AnimatedRoutes"
 import productInfo from "./assets/fonts/product-info/product-info"
+import ScrollToTop from "./ScrollToTop"
 
 function App() {
     const [cartItems, setCartItems] = useState(productInfo.initialCart)
@@ -42,6 +43,7 @@ function App() {
 
     return (
         <Router basename="/shopping-cart">
+            <ScrollToTop />
             <AnimatedRoutes
                 handleAddCartItem={handleAddCartItem}
                 cartItems={cartItems}
