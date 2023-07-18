@@ -29,15 +29,6 @@
     font-size: 1.2rem;
 }
 
-.blue-checkout-button {
-    background-color: rgb(48, 111, 219);
-    color: white;
-    font-size: 1.2rem;
-    padding: 10px 0px;
-    border: none;
-    border-radius: 10px;
-}
-
 .cart-item-info-left {
     width: 150px;
 }

@@ -12,14 +12,45 @@ import {
     AiFillApple
 } from "react-icons/ai"
 import Footer from "./components/Footer"
+import { useState, useEffect } from "react"
+import productInfo from "./assets/fonts/product-info/product-info"
 
-function AnimatedRoutes({
-    handleAddCartItem,
-    cartItems,
-    total,
-    handleItemRemove
-}) {
+function AnimatedRoutes() {
     const location = useLocation()
+    const [cartItems, setCartItems] = useState(productInfo.initialCart)
+    const [total, setTotal] = useState(0)
+
+    function handleAddCartItem(itemName) {
+        const currentCartItems = [...cartItems]
+        setCartItems(
+            currentCartItems.map((cartItem) => {
+                if (cartItem.name === itemName) {
+                    cartItem.qty++
+                    return cartItem
+                } else {
+                    return cartItem
+                }
+            })
+        )
+    }
+
+    function handleItemRemove(itemName) {
+        const currentCartItems = [...cartItems]
+        currentCartItems.forEach((item) => {
+            if (item.name === itemName) {
+                item.qty = 0
+            }
+        })
+        setCartItems(currentCartItems)
+    }
+
+    useEffect(() => {
+        let calculatedTotal = 0
+        cartItems.forEach((item) => {
+            calculatedTotal += item.price * item.qty
+        })
+        setTotal(calculatedTotal)
+    }, [cartItems])
 
     const navStyles =
         location.pathname === "/ipad"

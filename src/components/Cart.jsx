@@ -56,10 +56,52 @@ function Cart({ cartItems, total, handleItemRemove }) {
                     : null}
 
                 {total > 0 ? (
-                    <button className="blue-checkout-button">Check out</button>
+                  
+                        <div style={{ display: "flex", flexDirection: 'column', gap: "20px", marginBottom: '20px', width: '600px', alignSelf: 'flex-end' }}>
+                            <div
+                                style={{
+                                    display: "flex",
+                                    justifyContent: "space-between"
+                                }}
+                            >
+                                <p>Subtotal</p>
+                                <p>${total.toFixed(2)}</p>
+                            </div>
+                            <div
+                                style={{
+                                    display: "flex",
+                                    justifyContent: "space-between"
+                                }}
+                            >
+                                <p>Shipping</p>
+                                <p>Free</p>
+                            </div>
+                            <div
+                                style={{
+                                    display: "flex",
+                                    justifyContent: "space-between"
+                                }}
+                            >
+                                <p>Estimated tax:</p>
+                                <p>${(total * 0.0725).toFixed(2)}</p>
+                            </div>
+                            <hr></hr>
+                            <div
+                                style={{
+                                    display: "flex",
+                                    justifyContent: "space-between"
+                                }}
+                            >
+                                <p style={{ fontWeight: "bold" }}>Total</p>
+                                <p style={{ fontWeight: "bold" }}>${(total + total * 0.0725).toFixed(2)}</p>
+                            </div>
+                            <button className="blue-checkout-button">
+                                Check out
+                            </button>
+                        </div>
+              
                 ) : null}
             </div>
-
         </motion.div>
     )
 }

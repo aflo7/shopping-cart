@@ -22,7 +22,7 @@ function CartItem({ handleItemRemove, cartItem }) {
                     <p>{qty}</p>
                     <div className="cart-item-info-price">
                         <p>
-                            ${qty * price}
+                            ${(qty * price).toFixed(2)}
                         </p>
                         <button
                             className="removal-button normal"
