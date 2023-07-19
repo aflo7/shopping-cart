@@ -33,3 +33,23 @@
     width: fit-content;
     align-self: flex-end;
 }
+
+.checkout-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+    align-self: flex-end;
+    width: 100%;
+}
+
+.checkout-wrapper > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (min-width: 1000px) {
+    .checkout-wrapper {
+        width: 600px;
+    }
+}

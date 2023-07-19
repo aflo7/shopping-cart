@@ -3,6 +3,18 @@ import CartItem from "./CartItem"
 import { motion } from "framer-motion"
 
 function Cart({ cartItems, total, handleItemRemove }) {
+    const renderedCartItems = cartItems.map((item, i) => {
+        if (item.qty > 0) {
+            return (
+                <CartItem
+                    handleItemRemove={handleItemRemove}
+                    cartItem={item}
+                    key={i}
+                />
+            )
+        } else return null
+    })
+
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -34,73 +46,37 @@ function Cart({ cartItems, total, handleItemRemove }) {
                                 <span className="blue-text">Learn more</span>
                             </p>
                         </div>
+                        {renderedCartItems}
+                        <div className="checkout-wrapper">
+                            <div>
+                                <p>Subtotal</p>
+                                <p>${total.toFixed(2)}</p>
+                            </div>
+                            <div>
+                                <p>Shipping</p>
+                                <p>Free</p>
+                            </div>
+                            <div>
+                                <p>Estimated tax:</p>
+                                <p>${(total * 0.0725).toFixed(2)}</p>
+                            </div>
+                            <hr></hr>
+                            <div>
+                                <p style={{ fontWeight: "bold" }}>Total</p>
+                                <p style={{ fontWeight: "bold" }}>
+                                    ${(total + total * 0.0725).toFixed(2)}
+                                </p>
+                            </div>
+                            <button className="blue-checkout-button">
+                                Check out
+                            </button>
+                        </div>
                     </>
                 ) : (
                     <p style={{ fontSize: "1.8rem", fontWeight: "bold" }}>
                         Your cart is empty{" "}
                     </p>
                 )}
-
-                {total > 0
-                    ? cartItems.map((item, i) => {
-                          if (item.qty > 0) {
-                              return (
-                                  <CartItem
-                                      handleItemRemove={handleItemRemove}
-                                      cartItem={item}
-                                      key={i}
-                                  />
-                              )
-                          } else return null
-                      })
-                    : null}
-
-                {total > 0 ? (
-                  
-                        <div style={{ display: "flex", flexDirection: 'column', gap: "20px", marginBottom: '20px', width: '600px', alignSelf: 'flex-end' }}>
-                            <div
-                                style={{
-                                    display: "flex",
-                                    justifyContent: "space-between"
-                                }}
-                            >
-                                <p>Subtotal</p>
-                                <p>${total.toFixed(2)}</p>
-                            </div>
-                            <div
-                                style={{
-                                    display: "flex",
-                                    justifyContent: "space-between"
-                                }}
-                            >
-                                <p>Shipping</p>
-                                <p>Free</p>
-                            </div>
-                            <div
-                                style={{
-                                    display: "flex",
-                                    justifyContent: "space-between"
-                                }}
-                            >
-                                <p>Estimated tax:</p>
-                                <p>${(total * 0.0725).toFixed(2)}</p>
-                            </div>
-                            <hr></hr>
-                            <div
-                                style={{
-                                    display: "flex",
-                                    justifyContent: "space-between"
-                                }}
-                            >
-                                <p style={{ fontWeight: "bold" }}>Total</p>
-                                <p style={{ fontWeight: "bold" }}>${(total + total * 0.0725).toFixed(2)}</p>
-                            </div>
-                            <button className="blue-checkout-button">
-                                Check out
-                            </button>
-                        </div>
-              
-                ) : null}
             </div>
         </motion.div>
     )

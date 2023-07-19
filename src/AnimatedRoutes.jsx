@@ -14,6 +14,7 @@ import {
 import Footer from "./components/Footer"
 import { useState, useEffect } from "react"
 import productInfo from "./assets/fonts/product-info/product-info"
+import "./css/animated-routes.css"
 
 function AnimatedRoutes() {
     const location = useLocation()
@@ -36,9 +37,9 @@ function AnimatedRoutes() {
 
     function handleItemRemove(itemName) {
         const currentCartItems = [...cartItems]
-        currentCartItems.forEach((item) => {
-            if (item.name === itemName) {
-                item.qty = 0
+        currentCartItems.forEach((cartItem) => {
+            if (cartItem.name === itemName) {
+                cartItem.qty = 0
             }
         })
         setCartItems(currentCartItems)
@@ -46,8 +47,8 @@ function AnimatedRoutes() {
 
     useEffect(() => {
         let calculatedTotal = 0
-        cartItems.forEach((item) => {
-            calculatedTotal += item.price * item.qty
+        cartItems.forEach((cartItem) => {
+            calculatedTotal += cartItem.price * cartItem.qty
         })
         setTotal(calculatedTotal)
     }, [cartItems])
@@ -90,10 +91,13 @@ function AnimatedRoutes() {
                     </div>
 
                     <div className="nav-right">
-                        <AiOutlineSearch style={textStyles} className="search-icon" />
+                        <AiOutlineSearch
+                            style={textStyles}
+                            className="search-icon"
+                        />
 
                         <Link to="/cart">
-                            <AiOutlineShoppingCart style={textStyles}/>
+                            <AiOutlineShoppingCart style={textStyles} />
                         </Link>
                     </div>
                 </nav>
@@ -131,7 +135,6 @@ function AnimatedRoutes() {
                     }
                 />
             </Routes>
-
             <Footer />
         </AnimatePresence>
     )
