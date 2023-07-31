@@ -21,8 +21,6 @@ function CartItem({ handleItemRemove, cartItem, handleItemQtyChange }) {
                 </div>
                 <div className="cart-item-info">
                     <p className="cart-item-info-left">{cartItem.name}</p>
-                    {/* <p>{cartItem.qty}</p> */}
-
                     <select
                         onChange={(e) =>
                             handleItemQtyChange(cartItem.name, e.target.value)
