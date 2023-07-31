@@ -2,13 +2,14 @@ import "../css/cart.css"
 import CartItem from "./CartItem"
 import { motion } from "framer-motion"
 
-function Cart({ cartItems, total, handleItemRemove }) {
-    const renderedCartItems = cartItems.map((item, i) => {
-        if (item.qty > 0) {
+function Cart({ cartItems, total, handleItemRemove, handleItemQtyChange }) {
+    const renderedCartItems = cartItems.map((cartItem, i) => {
+        if (cartItem.qty > 0) {
             return (
                 <CartItem
                     handleItemRemove={handleItemRemove}
-                    cartItem={item}
+                    handleItemQtyChange={handleItemQtyChange}
+                    cartItem={cartItem}
                     key={i}
                 />
             )

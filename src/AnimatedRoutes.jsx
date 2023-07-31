@@ -25,7 +25,7 @@ function AnimatedRoutes() {
         const currentCartItems = [...cartItems]
         setCartItems(
             currentCartItems.map((cartItem) => {
-                if (cartItem.name === itemName) {
+                if (cartItem.name === itemName && cartItem.qty < 5) {
                     cartItem.qty++
                     return cartItem
                 } else {
@@ -40,6 +40,16 @@ function AnimatedRoutes() {
         currentCartItems.forEach((cartItem) => {
             if (cartItem.name === itemName) {
                 cartItem.qty = 0
+            }
+        })
+        setCartItems(currentCartItems)
+    }
+
+    function handleItemQtyChange(itemName, updatedQuantity) {
+        const currentCartItems = [...cartItems]
+        currentCartItems.forEach((cartItem) => {
+            if (cartItem.name === itemName) {
+                cartItem.qty = updatedQuantity
             }
         })
         setCartItems(currentCartItems)
@@ -131,6 +141,7 @@ function AnimatedRoutes() {
                             cartItems={cartItems}
                             total={total}
                             handleItemRemove={handleItemRemove}
+                            handleItemQtyChange={handleItemQtyChange}
                         />
                     }
                 />
